@@ -1,0 +1,137 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+ 
+#container {
+    background-image: url(https://images.unsplash.com/photo-1516528387618-afa90b13e000?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGxhbm8lMjBkZSUyMGZ1bmRvJTIwc2VsdmF8ZW58MHx8MHx8fDA%3D);
+    background-color: #dcdcdc;
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+ 
+#produto, .produto {
+    height: 65vh;
+    width: 19%;
+    background: linear-gradient(to top, rgb(255, 255, 255) 50%, rgb(196, 190, 190) 50%);
+    border-radius: 18px;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px;
+    text-align: center;
+    margin-top: 18.5vh;
+}
+ 
+.produtomargin {
+    height: 45%;
+    width: 70%;
+    margin: 10px 0;
+}
+ 
+.titulo {
+    font-size: 18px;
+    margin: 10px 0;
+}
+ 
+.preco {
+    font-size: 20px;
+    margin: 10px 0;
+}
+ 
+button {
+    background-color: rgb(96, 20, 20);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+ 
+button:hover {
+    background-color: rgb(63, 10, 10);
+}
+ 
+.listaC {
+    height: 100vh;
+    background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/18735543-desenho-arte-dos-desenhos-animados-de-padrao-de-textura-de-madeira-marrom-claro-paisagem-ampla-modelo-de-fundoial-gratis-vetor.jpg);
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    width: 30%;
+    float: right;
+    background-color: white;
+    margin-top: -100vh;
+}
+ 
+.header {
+    background-color: rgb(96, 20, 20);
+    height: 11vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+ 
+.minhaC {
+    font-size: 28px;
+}
+ 
+.excluir {
+    font-size: 35px;
+    color: white;
+    border: none;
+    background-color: rgb(96, 20, 20);
+    cursor: pointer;
+}
+ 
+.item-cesta {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.item-cesta p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+ 
+.item-cesta button {
+    background-color: #ed0030;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+}
+ 
+.item-cesta button:hover {
+    background-color: #c00028;
+}
+.img{
+    height: 10vh;
+    width: 10vh;
+    margin-top: 4px;
+    margin-left: 19px;
+}
+.produto img{
+    height: 50%;
+    width: 105%;
+    border-radius: 10px;
+    margin-top: -5px;
+}
