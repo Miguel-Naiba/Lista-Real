@@ -69,18 +69,14 @@ function atualizarListaC() {
     const listaC = document.querySelector('.listaC');
     const totalElement = document.getElementById('total'); 
 
-    // Remove todos os itens existentes na lista
     const itensExistentes = listaC.querySelectorAll('.item-cesta');
     itensExistentes.forEach(item => item.remove());
 
-    let total = 0; // Inicializa o total geral
-
-    // Adiciona os produtos atualizados na lista
+    let total = 0; 
     produtosNaCesta.forEach((produto, index) => {
         const item = document.createElement('div');
         item.classList.add('item-cesta');
 
-        // Calcula o preço total do item (quantidade * preço unitário)
         const precoNumerico = parseFloat(produto.preco.replace(/[^\d.-]/g, ''));
         const precoTotalItem = precoNumerico * produto.quantidade;
 
@@ -96,14 +92,11 @@ function atualizarListaC() {
         `;
         listaC.appendChild(item);
 
-        // Adiciona o preço total do item ao total geral
         total += precoTotalItem;
     });
 
-    // Atualiza o valor total no elemento <h2>
     totalElement.textContent = `Total: $${total.toFixed(2)}`;
 
-    // Adiciona eventos para os botões de aumentar e diminuir quantidade
     const botoesAumentar = document.querySelectorAll('.aumentar');
     botoesAumentar.forEach(botao => {
         botao.addEventListener('click', (e) => {
@@ -119,7 +112,7 @@ function atualizarListaC() {
             const index = e.target.getAttribute('data-index');
             produtosNaCesta[index].quantidade -= 1;
 
-            // Remove o produto da cesta se a quantidade for 0
+            
             if (produtosNaCesta[index].quantidade === 0) {
                 produtosNaCesta.splice(index, 1);
             }
@@ -144,16 +137,15 @@ botaoExcluir.addEventListener('click', () => {
 });
 
 document.addEventListener('click', (event) => {
-    // Verifica se o clique foi fora do aside
+    
     if (!listaC.contains(event.target) && !event.target.closest('.comprar')) {
-        listaC.classList.remove('mostrar'); // Remove a classe que exibe o aside
-        listaC.classList.add('escondida'); // Adiciona a classe que esconde o aside
+        listaC.classList.remove('mostrar'); 
+        listaC.classList.add('escondida'); 
     }
 });
 
-// Impede que o clique dentro do aside feche o aside
 listaC.addEventListener('click', (event) => {
-    event.stopPropagation(); // Impede que o clique dentro do aside seja propagado para o document
+    event.stopPropagation(); 
 });
 
 
